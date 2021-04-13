@@ -10,7 +10,7 @@ public class Calculator {
 
                 Scanner input = new Scanner(System.in);
 
-                System.out.println("Select one of them: +, -, *, /");
+                System.out.println("Select one of them: *, /, +, -, ");
                 operator = input.next().charAt(0);
 
 
@@ -21,6 +21,16 @@ public class Calculator {
                 num2 = input.nextDouble();
 
                 switch (operator) {
+                    case '*':
+                        result = num1 * num2;
+                        System.out.println(num1 + " * " + num2 + " = " + result);
+                        break;
+
+
+                    case '/':
+                        result = num1 / num2;
+                        System.out.println(num1 + " / " + num2 + " = " + result);
+                        break;
 
                    case '+':
                         result = num1 + num2;
@@ -33,16 +43,6 @@ public class Calculator {
                         System.out.println(num1 + " - " + num2 + " = " + result);
                         break;
 
-                    case '*':
-                        result = num1 * num2;
-                        System.out.println(num1 + " * " + num2 + " = " + result);
-                        break;
-
-
-                    case '/':
-                        result = num1 / num2;
-                        System.out.println(num1 + " / " + num2 + " = " + result);
-                        break;
 
                     default:
                         System.out.println("Wrong !");
